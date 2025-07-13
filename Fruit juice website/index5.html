@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment - Juicy Bliss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0fff0;
+      padding: 40px;
+    }
+    .payment-box {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .success-message {
+      display: none;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h2>💳 Creditcard Payment</h2>
+    <form id="paymentForm">
+      <label>Cardholder Name</label>
+      <input type="text" placeholder="name" required>
+      
+      <label>Card Number</label>
+      <input type="text" placeholder="12334" required>
+      <label>Expiry Date</label>
+      <input type="text" placeholder="MM/YY" required>
+      <button type="submit">Pay </button>
+    </form>
+    <div class="success-message" id="successMessage">
+      ✅ Payment Successful! Thank you for your purchase!
+    </div>
+  </div>
+  <script>
+  document.getElementById('paymentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Payment processed successfully!');
+    document.getElementById('successMessage').style.display = 'block';
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
